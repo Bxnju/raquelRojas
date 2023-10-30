@@ -29,7 +29,7 @@ body {
 .menu-toggle {
     cursor: pointer;
     display: flex;
-    z-index: 5;
+    z-index: 8;
     padding: 1em 1em;
     flex-direction: column;
 }
@@ -44,7 +44,7 @@ body {
 
 .menu {
     position: absolute;
-    z-index: 3;
+    z-index: 7;
     background:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0, .6)), url('https://data.1freewallpapers.com/download/texture-red-stains-background.jpg');
     background-size: cover;
     width: 100%;
@@ -90,22 +90,83 @@ section{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255, .3)), url('https://img.freepik.com/foto-gratis/fondo-piso-madera_53876-88628.jpg?size=626&ext=jpg&ga=GA1.1.867424154.1698192000&semt=ais');
+    background-size: cover;
+    background-position: fixed;
 }
 
 section h1{
-    font-family: var(--anton);
-    font-size: 3rem;
+    font-family: var(--play);
+    font-size: calc(100% + 2em);
     text-align: center;
     padding: 2rem;
+    background: url('https://data.1freewallpapers.com/download/texture-red-stains-background.jpg');
+    background-size: cover;
+    background-position: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: leftSlide 1s ease-in-out;
 }
 
-section .texto{
+section .texto, section .poema{
     padding: 1em 2em;
-    font-size: 1.1em;
-    font-family: var(--rubik);
+    position: relative;
+    z-index: 3;
+    font-size: 1.1em;    
+    font-family: var(--raleway);
+    font-weight: bold;
     text-align: justify;
+    animation: rightSlide 1s ease-in-out;
+}
+
+section .poema{
+    background: linear-gradient(to bottom, transparent, rgba(255, 0, 0, 0.758));
+    font-family: var(--play);
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.reinaroja > .imagenReina{
+    width: 50%;
+    left: 3em;
+    z-index: 2;
+    position: absolute;
+    filter: opacity(0.4) saturate(1.5);
+    clip-path: polygon(50% 0%, 83% 5%, 100% 35%, 100% 70%, 82% 97%, 50% 100%, 17% 96%, 0% 70%, 0% 35%, 17% 6%);
+}
+
+.reinaroja > .imagenReina2{
+    width: 60%;
+    top: 10%;
+    z-index: 2;
+    position: absolute;
+    filter: opacity(0.4) saturate(1.5);
+    clip-path: polygon(50% 0%, 83% 5%, 100% 35%, 100% 70%, 82% 97%, 50% 100%, 17% 96%, 0% 70%, 0% 35%, 17% 6%);
+    right: 3em;
 }
 
 #miAudio{
     display: none;
+}
+
+@keyframes leftSlide{
+    from{
+        opacity: 0.1;
+        transform: translateX(-50%) rotate(10deg);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes rightSlide{
+    from{
+        opacity: 0.1;
+        transform: translateX(50%) rotate(-10deg);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
 }
