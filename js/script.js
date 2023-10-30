@@ -6,11 +6,6 @@ const menuToggle = document.getElementById("menu-toggle");
         menuToggle.classList.toggle("open");
     });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const miAudio = document.getElementById("miAudio");
-    miAudio.volume = 0.2;
-});
-
 const miAudio = document.getElementById("miAudio");
 const btnAudio = document.getElementById("btnAudio");
 let cont = 0;
