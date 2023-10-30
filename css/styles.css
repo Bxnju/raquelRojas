@@ -8,6 +8,11 @@
     --anton: 'Anton', sans-serif;
 }
 
+::selection{
+    background: #c20000;
+    color: #ffffff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -21,9 +26,14 @@ body {
 .navbar {
     background:  linear-gradient(90deg, rgb(191, 9, 9), rgb(109, 7, 7));
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
+}
+
+.navbar > img{
+    padding: 1em 1em;
+    width: 20%;
 }
 
 .menu-toggle {
@@ -124,6 +134,34 @@ section .poema{
     font-family: var(--play);
     font-size: 0.9em;
     text-align: center;
+}
+
+section .integrantes{
+    padding: 2em 2em;
+    display: grid;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:  linear-gradient(90deg, rgb(191, 9, 9), rgb(109, 7, 7));
+    margin-top: 2em;
+    color: #fff;
+}
+
+section .integrantes .integrante{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .integrantes .integrante h3{
+    font-family: var(--monserrat);
+}
+
+section .integrantes .integrante > img{
+    clip-path: circle(50% at 50% 50%);
+    width: 50%;
 }
 
 .reinaroja > .imagenReina{
