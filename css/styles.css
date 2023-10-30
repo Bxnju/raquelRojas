@@ -103,6 +103,24 @@ section{
     background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255, .3)), url('https://img.freepik.com/foto-gratis/fondo-piso-madera_53876-88628.jpg?size=626&ext=jpg&ga=GA1.1.867424154.1698192000&semt=ais');
     background-size: cover;
     background-position: fixed;
+    padding-top: 1em;
+}
+
+section button{
+    padding: 0.5em;
+    border-radius: 50%;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    background-color: #c20000;
+    color: #fff;
+    border: none;
+    box-shadow: 2px 0 10px rgba(0,0,0, .3);
+    left: 1em;
+    top: 7.5em;
+    position: absolute;
+    z-index: 5;
+    animation: leftSlide 1s ease-in-out;
 }
 
 section h1{
@@ -175,7 +193,7 @@ section .integrantes .integrante > img{
 
 .reinaroja > .imagenReina2{
     width: 60%;
-    top: 10%;
+    top: 15%;
     z-index: 2;
     position: absolute;
     filter: opacity(0.4) saturate(1.5);

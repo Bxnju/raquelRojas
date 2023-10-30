@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Reina Roja | Proyecto</title>
 </head>
@@ -23,12 +24,15 @@
         </div>
     </div>
 
-    <!-- <audio controls id="miAudio" autoplay>
+    <audio controls id="miAudio">
         <source src="assets/alicia_theme.mp3" volume="0" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
-    </audio> -->
+    </audio>
 
     <section class="reinaroja">
+        <button onclick="playAndPause()"><span id="btnAudio" class="material-symbols-outlined">
+            volume_up
+            </span></button>
         <h1>Reina Roja</h1>
         <div class="texto">
             En el mundo del espejo, todo es relativo. El tiempo pasa a diferentes velocidades, las reglas del juego cambian constantemente y la realidad es a menudo absurda. 
