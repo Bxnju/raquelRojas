@@ -204,8 +204,33 @@ section .integrantes .integrante > img{
     right: 3em;
 }
 
-#miAudio{
+.raquel h1{
+    padding-top: 1.5em;
+}
+
+audio{
     display: none;
+}
+
+.poema button{
+    position: absolute;
+    top: -15em;
+}
+
+.texto button{
+    position: absolute;
+    top: -10em;
+}
+
+.raquel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.raquel > .raquelCandidata{
+    width: 85%;
+    animation: rightSlide 1.5s ease;
 }
 
 @keyframes leftSlide{

@@ -25,13 +25,24 @@
         </div>
     </div>
 
-    <audio controls id="miAudio">
-        <source src="assets/narracion_reina_roja.mp3" type="audio/mpeg">
+
+    <audio controls id="miAudioAlicia" autoplay loop>
+        <source src="assets/alicia_theme.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <audio controls id="miAudioTexto">
+        <source src="assets/narracionReinaRoja.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <audio controls id="miAudioPoema">
+        <source src="assets/narracionReinaOculta.mp3" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
     </audio>
 
     <section class="reinaroja">
-        <button onclick="playAndPause()"><span id="btnAudio" class="material-symbols-outlined">
+        <button onclick="playAndPauseText()"><span id="btnAudioTexto" class="material-symbols-outlined">
             volume_up
             </span></button>
         <h1>Reina Roja</h1>
@@ -57,6 +68,9 @@
         <img class="imagenReina2" src="https://imagenes.elpais.com/resizer/YgL8n3rfBVI0oOCTZsjHcFghg5o=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/MFD42FBGV34WFLMHVBZECBFOLM.jpg" alt="">
         <h1>Poema: <br>La Reina Oculta</h1>
         <div class="poema">
+            <button onclick="playAndPausePoem()"><span id="btnAudioPoema" class="material-symbols-outlined">
+                volume_up
+                </span></button>
             En un lugar maravilloso montañas de celdas rojas y blancas se observan<br><br>
             y dentro de ellas una figura particular se sitúa<br><br>
             con un porte firme y rasgos finos se presenta esta reina<br><br>
@@ -77,4 +91,5 @@
     
 </body>
 <script src="js/script.js"></script>
+<script src="js/audioReina.js"></script>
 </html>

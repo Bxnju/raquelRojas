@@ -25,13 +25,28 @@
         </div>
     </div>
 
-    <!-- <audio controls id="miAudio" autoplay>
-        <source src="assets/alicia_theme.mp3" volume="0" type="audio/mpeg">
+    <audio controls id="miAudioAlicia" autoplay loop>
+        <source src="assets/alicia_theme.mp3" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
-    </audio> -->
+    </audio>
 
-    <section>
+    <audio controls id="miAudioDialogo">
+        <source src="assets/narracionDialogoRaquel.mp3" volume="0" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <audio controls id="miAudioTexto">
+        <source src="assets/narracionTextoRaquel.mp3" volume="0" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <section class="raquel">
+        <button onclick="playAndPauseText()">
+            <span id="btnAudioTexto" class="material-symbols-outlined">volume_up</span>
+        </button>
+
         <h1>Raquel Rojas</h1>
+        <img class="raquelCandidata" src="assets/raquelCandidata.jpg" alt="">
         <div class="texto">
             La ciudad de Medellín núnca había visto una candidata más preparada que Raquel, ha encabezado la lista en las encuestas
              y es quién tiene más posibilidades de ser ganadora,  no es raro de parecer ya que no ha perdido ni una sola vez en
@@ -119,30 +134,49 @@
             de un no retorno.<br><br>
 
         </div>
-        <div class="integrantes">
-            <div class="integrante">
-                <img src="assets/raquel.jpg" alt="">
-                <h3>Raquel Rojas</h3>
-                <p>La Reina Roja</p>
-            </div>
-            <div class="integrante">
-                <img src="assets/raquel.jpg" alt="">
-                <h3>Raquel Rojas</h3>
-                <p>La Reina Roja</p>
-            </div>
-            <div class="integrante">
-                <img src="assets/raquel.jpg" alt="">
-                <h3>Raquel Rojas</h3>
-                <p>La Reina Roja</p>
-            </div>
-            <div class="integrante">
-                <img src="assets/raquel.jpg" alt="">
-                <h3>Raquel Rojas</h3>
-                <p>La Reina Roja</p>
-            </div>
+
+        <h1>Dialogos</h1>
+        <div class="texto">
+            <button onclick="playAndPauseDialog()"><span id="btnAudioDialogo" class="material-symbols-outlined">
+                volume_up
+                </span></button>
+            Raquel, se encontraba una noche en su oficina, teniendo una conversación con su respectivo asesor de campaña cuyo nombre es Ernesto, éstos se reunieron con el objetivo de concluir ciertos asuntos para que su campaña estuviera perfecta. Raquel, muy seria le afirmaba:
+            <br><br>—Te cuento esto a ti, Ernesto, porque confío en tí y porque soy consciente de que debes saber todo de mí para poder ultimar todos los detalles de mi campaña.
+            <br><br>—No se preocupe Doctora Raquel, lo que se hable acá únicamente es para que ningún cabo de su campaña quede sin resolver, es crucial entender todo su contexto, para empezar, sería bueno que me hablara de su familia. 
+            
+            <br><br>Ernesto procedió a pedirle que le contara sobre su familia, por consiguiente, ella automáticamente evocó a su padre:
+            <br><br>—Mi padre siempre fue un hombre perfeccionista, todo el tiempo nos recalcaba a mi hermanastra y a mí que si queríamos triunfar no debíamos confiar en el trabajo de nadie más, porque nadie lo podía hacer mejor que nosotras mismas. Todo tenía que salir excelente y perfecto. Crecí y aún sigo completamente convencida de que es cierto lo que él, con tanta seguridad afirmaba. 
+            
+            <br><br>—Comprendí que, si quería ser alguien, debía forjarme en ese comportamiento perfeccionista y exigente. De mi madre, no tengo mucho de qué hablar, porque bueno, ya sabes lo que pasó…—afirmó con un tono tajante— Realmente, nunca fui cercana a mi hermanastra. Nuestras convicciones chocaban constantemente. Mi hermanastra siempre consideró que, al ser bondadosa y amable, sería reconocida por dichas virtudes y ganaría la aceptación y la empatía de las personas. Yo, por el contrario, consideraba que, si iba a ser reconocida, iba a ser por mis triunfos. Prefería ser reconocida como una persona hostil y dura, pero exitosa; a ser amable y empática, pero mediocre y débil. De la esposa de mi padre no hay mucho de qué hablar, ni me interesa hacerlo. 
+            
+            <br><br>Ernesto muy interesado por la conversación con Raquel y por lo que ella le describió, a continuación, procedió a preguntarle sobre algún recuerdo que haya sido significativo para ella durante su infancia. Raquel, no suele recordar mucho acerca de su infancia o su pasado y realmente no sabe si quiera hacerlo, sin embargo, comenzó a relatar con cautela:
+            
+            <br><br>—Al final de mi sexto año escolar, me eligieron para dar un discurso en la ceremonia de clausura de fin de año, ya que era una tradición que esto lo hiciera el alumno más destacado de cada grado. Ya con esto podrás entender por qué me eligieron a mí —exclamó orgullosa— Era obvio y de saberse que ni siquiera debía esforzarme para dar un discurso perfecto, incluso sin necesidad de tener un ensayo previo. Empleé un vocabulario que estaba segura de que para mis compañeros era algo avanzado, pero para mí ya era algo normal, debido a que a esa edad ya había leído diferentes libros que enriquecieron mi léxico y mi conocimiento general. Un detalle que olvidé mencionar era que, para el acto de clausura, los padres de familia estaban invitados, lo que significaba que mi padre estaría allí. Si es que, si debes saberlo todo cómo cuentas, la presencia de mi padre no ejercía en mí ningún tipo de sentimiento o emoción. 
+            
+            <br><br>En la consciencia de Raquel, la presencia de su padre en ese preciso momento era algo que la presionaba, pues significaba para ella la oportunidad de demostrar todas sus capacidades y así mismo poder recibir algún tipo de reconocimiento por parte de él, el cual, hasta el momento, no había logrado recibir. Sin embargo, estos sentimientos son lo que hacen que Raquel nunca hable  o acepte a  nadie más, a no ser que sea con ella misma. 
+            
+            <br><br>—Al llegar el día del evento, me preparé confiada y tranquila, pues estaba segura de que nada podía salir mal. Llegué con anterioridad al colegio, me informé acerca del itinerario del evento y noté que mi discurso tenía lugar al inicio del evento, por lo que sabía que toda la atención estaba puesta en mí cómo siempre y eso me encantaba. 
+            
+            <br><br>Ernesto escuchaba atentamente la historia, mientras que Raquel sentía que estaba relatando uno de los sucesos que más habían marcado su niñez, sin embargo, su propio ego le permitió seguir contando la historia.
+            
+            <br><br>—Llegó la hora de mi discurso, me ubiqué frente al público con seguridad y comencé a recitar mi discurso. Al inicio lo estaba haciendo de maravilla, hasta que decidí levantar mi mirada, inconscientemente mis ojos buscaron a mi padre. Lo ubiqué rápidamente. Él me observaba con una mirada fría, no emitía ningún tipo de emoción que pudiera leer. Su presencia me desconcentró. No entendía qué pasaba dentro de mí, pero había quedado paralizada. Automáticamente olvidé todo mi discurso, me quedé sin palabras. De un modo fugaz desvié la mirada de mi padre que me observaba con una ya monótona desaprobación, y me centré en la carpeta que tenía en mis manos, pero no podía modular ni leer lo que tan minuciosamente había escrito. No tenía control sobre mi boca y eso me enfureció, emitía palabras incomprensibles, y me bloqueé. Decidí quedarme callada y retirarme del lugar. Comprendí que la presencia de mi padre había ocasionado tan humillante respuesta en mí. 
+            
+            <br><br>Ernesto, procedió a expresarle a Raquel que su respuesta era normal para una niña de esa edad. Afirmando que cualquiera podría cometer errores, a lo que Raquel lo observó fulminantemente, ignorando sus palabras compasivas y continuó:
+            
+            <br><br>— Decidí ir al baño, me sentía furiosa con mi padre por arruinar mi momento. Sin embargo, simplemente me quedé un rato pensando sobre lo que pasó, y decidí continuar con mi día común y corriente. 
+            
+            
+            <br><br>—Al llegar a mi casa, mi sentimiento de ira había aumentado cada vez más. Mi padre era el culpable de mi fracaso y me enfureció aún más su actitud fría y egoísta. Desde ese día comprendí que nunca más me permitiría cometer errores. Mi forma de manejar las situaciones había sido modificada completamente, no soportaba trabajar con gente incompetente, ni mediocre. No volví a permitir que ninguna persona me desconcentrara o interrumpiera mi trabajo. Desde ese momento comprendí lo que mi padre tanto nos había recalcado, no hay mejor trabajo que el propio. Entendí que debía siempre responder por mí de la mejor manera posible si quería ser la mejor. Ese pensamiento me acompaña aún, y ha contribuido a que hoy en día esté donde esté y haya logrado todo lo que he querido. 
+            
+            <br><br>Luego de esto, Raquel concluyó la reunión enfocándose en discutir acerca de sus oponentes y sus estrategias de campaña.
+            
+            <br><br>Si esto se tratara de un homicidio ya tendríamos las pistas suficientes para encontrar un culpable y encontrar las razones del asesinato, sin embargo, no es más que una historia que necesita ser recontada varias veces para entenderse con razones justificadas y ya que sabemos las razones entendemos porque Raquel representa para si misma la candidata única y perfecta, una mujer en búsqueda de ser aquella persona mucho más arriba que cualquier persona en la cima de la pirámide. Esta mujer que ha forjado su propio destino y no se rendirá hasta crear uno en el que ella sea la única protagonista. 
+
         </div>
+
     </section>
     
 </body>
 <script src="js/script.js"></script>
+<script src="js/audioRaquel.js"></script>
 </html>
