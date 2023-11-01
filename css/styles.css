@@ -169,20 +169,49 @@ section .integrantes{
     color: #fff;
 }
 
+section .integrantes h1{
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: #fff;
+    color: #fff;
+}
+
 section .integrantes .integrante{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 2em 0;
+}
+
+section .integrantes .integrante{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+}
+
+section .integrantes .integrante:nth-child(odd){
+    animation: rightSlide 1s ease-in-out;
+}
+
+section .integrantes .integrante:nth-child(even){
+    animation: leftSlide 1s ease-in-out;
 }
 
 section .integrantes .integrante h3{
     font-family: var(--monserrat);
+    margin-top: .8em;
 }
 
 section .integrantes .integrante > img{
     clip-path: circle(50% at 50% 50%);
-    width: 50%;
+    width: 16em;
+    height: 16em;
+    object-fit: cover;
+    filter: saturate(1.2);
+    object-position: center;
+    box-shadow: 0 15px 1em rgba(0,0,0, .8);
 }
 
 .reinaroja > .imagenReina{
@@ -231,6 +260,18 @@ audio{
 .raquel > .raquelCandidata{
     width: 85%;
     animation: rightSlide 1.5s ease;
+}
+
+footer{
+    background:  linear-gradient(90deg, rgb(184, 19, 19), rgb(92, 0, 0));
+    font-family: var(--rubik);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em 0;
+
 }
 
 @keyframes leftSlide{
